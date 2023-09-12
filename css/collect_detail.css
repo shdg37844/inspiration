@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 1080px;
+    min-width: 1920px;
+    font-family: pingfang;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header部分------------------------------------------------------------------------------- */
+.page-header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.focus-line {
+    position: absolute;
+    top: 78px;
+    right: 174px;
+    width: 48px;
+    height: 2px;
+    background: #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1840px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+    width: 70px;
+    height: 40px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 21px;
+    left: 350px;
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    background: #EEE;
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 49px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #999999;
+}
+
+.search-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.scan-icon {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.header-shouye {
+    position: absolute;
+    top: 29px;
+    right: 262px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-collect {
+    position: absolute;
+    top: 29px;
+    right: 174px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-login {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: inline-flex;
+    display: none;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: #333;
+}
+
+.header-login span {
+    width: 63px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.header-my-hide {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.header-my-hide-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 40px;
+    background: url(../images/Ellipse1.png);
+}
+
+.header-my-hide-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.login-info {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 19px 20px;
+    width: 96px;
+    height: 100px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+    z-index: 100;
+}
+
+.login-info-line {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 76px;
+    height: 1px;
+    background: #EFEFEF;
+
+}
+
+/* 主体mainer部分-------------------------------------------------------------------------- */
+.page-mainer {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.back-hover {
+    position: absolute;
+    top: 42px;
+    left: 244px;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.mainer-content {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content-top-left {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.arrow-back {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin-left: 20px;
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 42px;
+}
+
+.content-top-right {
+    display: flex;
+    align-items: center;
+    margin-top: 41px;
+}
+
+.lock-icon {
+    display: flex;
+    align-items: center;
+}
+
+.privacy {
+    margin-right: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.create-icon {
+    display: flex;
+    align-items: center;
+    margin-top: -1px;
+}
+
+.content-text-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.content-text {
+    margin-top: 10px;
+    width: 1176px;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.content-list {
+    display: flex;
+    margin-top: 30px;
+}
+
+.content-column {
+    margin-right: 20px;
+}
+
+.content-column:last-child {
+    margin-right: 0;
+}
+
+.content-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.content-item-pic {
+    position: relative;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    display: none;
+}
+
+.pen {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.collect-btn {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 40px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 4px;
+    background: #FF3939;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    display: flex;
+    display: none;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 40px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.80);
+}
+
+.download-btn svg {
+    margin-right: 5px;
+}
+
+.content-item-pic:hover .edit-icon {
+    display: block;
+}
+
+.content-item-pic:hover .collect-btn {
+    display: flex;
+}
+
+.content-item-pic:hover .download-btn {
+    display: flex;
+}
+
+
+.content-item.one .content-item-pic {
+    width: 290px;
+    height: 413px;
+    background: url(../images/Rectangle\ 47\(1\).png);
+}
+
+.content-item.two .content-item-pic {
+    width: 290px;
+    height: 332px;
+    background: url(../images/Rectangle\ 48\(1\).png);
+}
+
+.content-item.three .content-item-pic {
+    width: 290px;
+    height: 437px;
+    background: url(../images/Rectangle\ 49\(1\).png);
+}
+
+.content-item.four .content-item-pic {
+    width: 290px;
+    height: 387px;
+    background: url(../images/Rectangle\ 50\(1\).png);
+}
+
+.content-item.five .content-item-pic {
+    width: 290px;
+    height: 363px;
+    background: url(../images/Rectangle\ 51\(1\).png);
+}
+
+.content-item.six .content-item-pic {
+    width: 290px;
+    height: 472px;
+    background: url(../images/Rectangle\ 52\(1\).png);
+}
+
+.content-item.seven .content-item-pic {
+    width: 290px;
+    height: 282px;
+    background: url(../images/Rectangle\ 53\(1\).png);
+}
+
+.content-item.eight .content-item-pic {
+    width: 290px;
+    height: 413px;
+    background: url(../images/Rectangle\ 54\(1\).png);
+}
+
+
+
+.content-item-info {
+    margin-top: 10px;
+    width: 290px;
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.comment-hide {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 290px;
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.content-item:hover .comment-hide {
+    display: block;
+}
+
+.content-item:hover .content-item-info.first {
+    color: transparent;
+}
+
+.upload-icon {
+    position: absolute;
+    top: 42px;
+    right: 218px;
+    width: 40px;
+    height: 40px;
+}
+
+.plus-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.pic-upload {
+    position: absolute;
+    top: 91px;
+    right: 186px;
+    display: inline-flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    background: rgba(0, 0, 0, 0.80);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.upload-union:hover .pic-upload {
+    display: inline-flex;
+}

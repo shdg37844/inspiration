@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 1080px;
+    min-width: 1920px;
+    font-family: pingfang;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header部分------------------------------------------------------------------------------- */
+.page-header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.focus-line {
+    position: absolute;
+    top: 78px;
+    right: 174px;
+    width: 48px;
+    height: 2px;
+    background: #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1840px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+    width: 70px;
+    height: 40px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 21px;
+    left: 350px;
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    background: #EEE;
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 49px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #999999;
+}
+
+.search-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.scan-icon {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.header-shouye {
+    position: absolute;
+    top: 29px;
+    right: 262px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-collect {
+    position: absolute;
+    top: 29px;
+    right: 174px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-login {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: inline-flex;
+    display: none;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: #333;
+}
+
+.header-login span {
+    width: 63px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.header-my-hide {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.header-my-hide-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 40px;
+    background: url(../images/Ellipse1.png);
+}
+
+.header-my-hide-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.login-info {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 19px 20px;
+    width: 96px;
+    height: 100px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+    z-index: 100;
+}
+
+.login-info-line {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 76px;
+    height: 1px;
+    background: #EFEFEF;
+
+}
+
+/* 主体部分mainer-------------------------------------------------------------------- */
+.page-mainer {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.collect-title {
+    position: absolute;
+    top: 40px;
+    left: 350px;
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 42px;
+}
+
+.folder-diningroom {
+    position: absolute;
+    top: 112px;
+    left: 350px;
+    width: 290px;
+    height: 217px;
+    font-size: 0;
+}
+
+.folder-bedroom {
+    position: absolute;
+    top: 112px;
+    left: 660px;
+    width: 290px;
+    height: 217px;
+    font-size: 0;
+}
+
+.folder-livingroom {
+    position: absolute;
+    top: 112px;
+    left: 970px;
+    width: 290px;
+    height: 217px;
+    font-size: 0;
+}
+
+.folder-outdoor {
+    position: absolute;
+    top: 112px;
+    left: 1280px;
+    width: 290px;
+    height: 217px;
+    font-size: 0;
+}
+
+
+.Rectangle28 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 189px;
+    height: 217px;
+    border-radius: 4px 0 0 4px;
+    /* background: rgba(0, 0, 0, 0.20);
+    background: #00000033; */
+}
+
+.Rectangle29 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 4px 0 0;
+}
+
+.Rectangle30 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 4px 0;
+}
+
+.Rectangle30.no {
+    width: 100px;
+    height: 108px;
+    background: #CCC;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    z-index: 100;
+}
+
+
+.folder-diningroom:hover .edit-icon {
+    display: block;
+}
+
+.folder-bedroom:hover .edit-icon {
+    display: block;
+}
+
+.folder-livingroom:hover .edit-icon {
+    display: block;
+}
+
+.folder-outdoor:hover .edit-icon {
+    display: block;
+}
+
+.pen {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.title {
+    position: absolute;
+    top: 237px;
+    left: 0;
+    width: 240px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+.num {
+    position: absolute;
+    top: 276px;
+    left: 0;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.lock-icon {
+    position: absolute;
+    top: 242px;
+    right: 0;
+}
+
+.create-icon {
+    position: absolute;
+    top: 49px;
+    right: 350px;
+}

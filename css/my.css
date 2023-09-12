@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 1920px;
+    font-family: pingfang;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header部分------------------------------------------------------------------------------- */
+.page-header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1840px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+    width: 70px;
+    height: 40px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 21px;
+    left: 350px;
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    background: #EEE;
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 49px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #999999;
+}
+
+.search-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.scan-icon {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.header-shouye {
+    position: absolute;
+    top: 29px;
+    right: 262px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-collect {
+    position: absolute;
+    top: 29px;
+    right: 174px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-login {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: inline-flex;
+    display: none;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: #333;
+}
+
+.header-login span {
+    width: 63px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.header-my-hide {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.header-my-hide-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 40px;
+    background: url(../images/Ellipse1.png);
+}
+
+.header-my-hide-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.login-info {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 19px 20px;
+    width: 96px;
+    height: 100px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+    z-index: 100;
+}
+
+.login-info-line {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 76px;
+    height: 1px;
+    background: #EFEFEF;
+
+}
+
+.myinfo-hover:hover .login-info {
+    display: flex;
+}
+
+/* 主体mainer部分--------------------------------------------------------------------------- */
+.page-mainer {
+    max-width: 519px;
+    margin: 0 auto;
+}
+
+.mainer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    margin-top: 80px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: url(../images/Ellipse\ 2\(1\).png);
+}
+
+.my-info {
+    position: relative;
+    margin-top: 80px;
+}
+
+.my-name-container .name {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.my-name-container .name-form {
+    display: flex;
+    width: 519px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid #EFEFEF;
+}
+
+.my-name-container .name-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    outline: none;
+    border: none;
+}
+
+.name-input::placeholder {
+    color: #333;
+}
+
+.my-phone-container {
+    margin-top: 40px;
+}
+
+.my-phone-container .phone {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.my-phone-container .phone-form {
+    display: flex;
+    width: 371px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid #EFEFEF;
+    background: #EEE;
+}
+
+.my-phone-container .phone-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    outline: none;
+    border: none;
+    background: #EEE;
+}
+
+.phone-input::placeholder {
+    color: #999999;
+}
+
+.my-phone-box {
+    display: flex;
+    justify-content: space-between
+}
+
+.my-btn {
+    display: inline-flex;
+    padding: 10px 22px;
+    align-items: flex-start;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 2px;
+    background: #333;
+}
+
+.my-intro-container {
+    margin-top: 40px;
+}
+
+.intro-title {
+    margin-bottom: 6px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.intro-content {
+    display: flex;
+    width: 519px;
+    height: 100px;
+    padding: 70px 10px 10px 486px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid #EFEFEF;
+}
+
+.intro-num {
+    color: #666;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -1px;
+}
+
+.my-btn.save {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -80px;
+}

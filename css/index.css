@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 1080px;
+    min-width: 1920px;
+    font-family: pingfang;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header部分------------------------------------------------------------------------------- */
+.page-header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 80px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.focus-line {
+    position: absolute;
+    top: 78px;
+    right: 262px;
+    width: 32px;
+    height: 2px;
+    background: #333;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1840px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+    width: 70px;
+    height: 40px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 21px;
+    left: 350px;
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    background: #EEE;
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 49px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #999999;
+}
+
+.search-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.scan-icon {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.header-shouye {
+    position: absolute;
+    top: 29px;
+    right: 262px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-collect {
+    position: absolute;
+    top: 29px;
+    right: 174px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.header-login {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: inline-flex;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: #333;
+    /* display: none; */
+}
+
+.header-login span {
+    width: 63px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.header-my-hide {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.header-my-hide-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 40px;
+    background: url(../images/Ellipse1.png);
+}
+
+.header-my-hide-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.login-info {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 19px 20px;
+    width: 96px;
+    height: 100px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+    z-index: 100;
+}
+
+.login-info-line {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 76px;
+    height: 1px;
+    background: #EFEFEF;
+
+}
+
+.login-mask {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+    display: none;
+}
+
+.login-content {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 599px;
+    height: 521px;
+    background: #FFF;
+    /* display: none;  */
+}
+
+.login-content-logo {
+    position: absolute;
+    top: 40px;
+    left: 242px;
+    width: 116px;
+    height: 40px;
+}
+
+.login-content-weixin {
+    position: absolute;
+    top: 120px;
+    left: 161px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.login-content-weixin.y {
+    color: #999;
+}
+
+.login-content-phone.y {
+    color: #333;
+}
+
+.login-content-phone {
+    position: absolute;
+    top: 120px;
+    right: 160px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #999;
+}
+
+
+.login-content-qrcode {
+    position: absolute;
+    top: 181px;
+    left: 186px;
+    width: 228px;
+    height: 228px;
+    z-index: 150;
+}
+
+.qrcode-border {
+    position: absolute;
+    top: 165px;
+    left: 170px;
+    width: 260px;
+    height: 260px;
+    fill: #FFF;
+    stroke-width: 1px;
+    stroke: #EFEFEF;
+}
+
+.login-content-bottom {
+    position: absolute;
+    bottom: 56px;
+    left: 202px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.active {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 599px;
+    height: 521px;
+    background: #FFF;
+    display: none;
+}
+
+.login-phone-container {
+    position: absolute;
+    top: 185px;
+    left: 99px;
+}
+
+.login-phone-container .phone {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.login-phone-container .phone-form {
+    display: flex;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid hsl(0, 0%, 94%);
+}
+
+.login-phone-container .phone-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    outline: none;
+    border: none;
+}
+
+.phone-input::placeholder {
+    color: #999999;
+}
+
+.login-code-container {
+    position: absolute;
+    top: 275px;
+    left: 99px;
+}
+
+.login-code-container .code {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.login-code-container .code-form {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid hsl(0, 0%, 94%);
+}
+
+.code-line {
+    position: absolute;
+    left: 309px;
+    width: 1px;
+    height: 40px;
+    background: #EFEFEF;
+}
+
+.code-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #CCC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.login-code-container .code-input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    outline: none;
+    border: none;
+}
+
+.code-input::placeholder {
+    color: #999999;
+}
+
+.login-bottom-btn {
+    position: absolute;
+    bottom: 76px;
+    left: 99px;
+    display: flex;
+    width: 400px;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 2px;
+    background: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 主体mainer部分------------------------------------------------------------------------------------------ */
+.page-mainer {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mainer-left {
+    position: relative;
+    width: 330px;
+    height: 1000px;
+    border-right: 1px solid #EFEFEF;
+}
+
+.mainer-filter {
+    position: absolute;
+    color: #111;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.mainer-filter.style {
+    top: 20px;
+    left: 40px;
+}
+
+.mainer-filter.space {
+    top: 364px;
+    left: 40px;
+}
+
+.filter-box {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-box.style {
+    top: 68px;
+    left: 40px;
+}
+
+.filter-box.space {
+    top: 412px;
+    left: 40px;
+}
+
+.filter-item {
+    display: inline-flex;
+    padding: 7px 14px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border: 1px solid #EFEFEF;
+    background: #FFF;
+}
+
+
+
+.filter-item.wrap span {
+    color: #777;
+    line-height: 20px;
+}
+
+.filter-item.wrap svg {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.mainer-right {
+    position: relative;
+    width: 1590px;
+}
+
+.mainer-right-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainer-right-item {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    display: flex;
+    display: none;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 40px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.80);
+}
+
+.download-btn svg {
+    margin-right: 5px;
+}
+
+.mainer-right-item:hover .download-btn {
+    display: flex;
+}
+
+.mainer-right-item:nth-child(5n) {
+    margin-right: 0;
+}
+
+.mainer-right-item:first-child {
+    background: url(../images/Rectangle2.png);
+}
+
+.mainer-right-item:nth-child(2) {
+    background: url(../images/Rectangle3.png);
+}
+
+.mainer-right-item:nth-child(3) {
+    background: url(../images/Rectangle4.png);
+}
+
+.mainer-right-item:nth-child(4) {
+    background: url(../images/Rectangle5.png);
+}
+
+.mainer-right-item:nth-child(5) {
+    background: url(../images/Rectangle6.png);
+}
+
+.mainer-right-item:nth-child(6) {
+    background: url(../images/Rectangle8.png);
+}
+
+.mainer-right-item:nth-child(7) {
+    background: url(../images/Rectangle9.png);
+}
+
+.mainer-right-item:nth-child(8) {
+    background: url(../images/Rectangle10.png);
+}
+
+.mainer-right-item:nth-child(9) {
+    background: url(../images/Rectangle11.png);
+}
+
+.mainer-right-item:nth-child(10) {
+    background: url(../images/Rectangle12.png);
+}
+
+.mainer-right-item:nth-child(11) {
+    background: url(../images/Rectangle13.png);
+}
+
+.mainer-right-item:nth-child(12) {
+    background: url(../images/Rectangle14.png);
+}
+
+.mainer-right-item:nth-child(13) {
+    background: url(../images/Rectangle15.png);
+}
+
+.mainer-right-item:nth-child(14) {
+    background: url(../images/Rectangle16.png);
+}
+
+.mainer-right-item:nth-child(15) {
+    background: url(../images/Rectangle17.png);
+}
